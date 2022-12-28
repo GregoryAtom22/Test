@@ -47,7 +47,12 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="input-wrapper"> 
+                <input 
+                id="message" 
+                onchange="changeHandler(event)" 
+                /> 
+            </div>
         </div>
     </body>
 
@@ -181,14 +186,8 @@ body{
 }
 </style>
 <script> 
-function clickHandler() { 
-    alert("STOP CLICK ON MY FACE!!!") 
-} 
-function moveMouseEnter(event) { 
-    console.log("MouseEnter", event); 
-} 
-function moveMouseOut() { 
-    console.log("MouseOut", event); 
-} 
-
+function clickHandler() { alert("STOP CLICK ON MY FACE!!!") } 
+function moveMouseEnter(event) { console.log("MouseEnter", event); } 
+function moveMouseOut() { console.log("MouseOut", event); } 
+function changeHandler() { console.log("SomeInput", event) }
 </script>

@@ -8,7 +8,9 @@
                 <img 
                 class="icon" 
                 src="./Ya.jpg"
-                
+                onclick="clickHandler()"
+                onmouseenter="moveMouseEnter(event)"
+                onmouseout="moveMouseOut(event)"
                 >
             </div>
             <div class="mygroup">
@@ -178,4 +180,15 @@ body{
     background-color:lightcyan;
 }
 </style>
+<script> 
+function clickHandler() { 
+    alert("STOP CLICK ON MY FACE!!!") 
+} 
+function moveMouseEnter(event) { 
+    console.log("MouseEnter", event); 
+} 
+function moveMouseOut() { 
+    console.log("MouseOut", event); 
+} 
 
+</script>

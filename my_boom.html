@@ -47,6 +47,16 @@
 </html>
 
 <style>
+body{
+    animation: backcolorchange 5s infinite;
+}
+@keyframes backcolorchange{
+    20%{background-color: rgb(39,253,245);}
+    40%{background-color: rgb(168,246,248);}
+    60%{background-color: rgb(215,255,254);}
+    80%{background-color: rgb(249,141,201);}
+    100%{background-color: rgb(247,101,184);}
+}
 .myself{
     animation: blinker 1s linear infinite;
 }
@@ -61,8 +71,9 @@
     text-decoration-style: wavy;
 }
 .groupinfo{
+    border-style: double;
     border-color: crimson;
-    border-width: 2px;
+    border-width: 4px;
     border-radius: 13em 0.5em/1em 0.5em;
 }
 .datebirth{

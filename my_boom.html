@@ -2,9 +2,9 @@
     <body>
         <div>
             <div class="myself">
-                <p class="name">Валентина Назарова</p>
-                <p class="tag">ЗвэрЧервь</p>
-                <p class="datebirth"></p>
+                <p class="name" id="myname">Валентина Назарова</p>
+                <p class="tag" id="mytag">ЗвэрЧервь</p>
+                <p class="datebirth">07.05.2002</p>
                 <img class="icon" src="./Ya.jpg">
             </div>
             <div class="mygroup">
@@ -14,29 +14,29 @@
                     <p id="group">МББ-001</p>
                 </div>
                 <div class="classmates">
-                    <div id="classmate1">
+                    <div class="classmate" id="classmate1">
                         <p class="name">Артем Звягинцев</p>
-                        <p class="tag"></p>
+                        <p class="tag">BankATMBoy</p>
                         <img class="icon" src="./artem.jpg">
                     </div>
-                    <div id="classmate2">
+                    <div class="classmate" id="classmate2">
                         <p class="name">Марат Рыскулов</p>
-                        <p class="tag"></p>
+                        <p class="tag">Power</p>
                         <img class="icon" src="./Marat.jpg">
                     </div>
-                    <div id="classmate3">
+                    <div class="classmate" id="classmate3">
                         <p class="name">Данил Уфимцев</p>
-                        <p class="tag"></p>
+                        <p class="tag">SampleText</p>
                         <img class="icon" src="./Danil.jpg">
                     </div>
-                    <div id="classmate4">
+                    <div class="classmate" id="classmate4">
                         <p class="name">Александр Байгозин</p>
-                        <p class="tag"></p>
+                        <p class="tag">LoveCats</p>
                         <img class="icon" src="./Sasha.jpg">
                     </div>
-                    <div id="classmate5">
+                    <div class="classmate" id="classmate5">
                         <p class="name">Степан Лысенко</p>
-                        <p class="tag"></p>
+                        <p class="tag">LoveToTalk</p>
                         <img class="icon" src="./Stepan.jpg">
                     </div>
                 </div>
@@ -48,30 +48,113 @@
 
 <style>
 .myself{
-
+    animation: blinker 1s linear infinite;
 }
-.mygroup{
-
+@keyframes blinker {
+  50% {
+    opacity: 0;
+}
+}
+#myname{
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+.groupinfo{
+    border-color: crimson;
+    border-width: 2px;
+    border-radius: 13em 0.5em/1em 0.5em;
+}
+.datebirth{
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
 }
 .icon{
-
+    padding:1px;
+    max-width: 500px;
 }
 .tag{
-    
+    display: inline-block;
+    font-style: italic;
+    animation: rotation 3s linear infinite;
 }
-#classmate1{
+.classmate .tag{
+    align-self: flex-start;
+}
+@keyframes rotation{
+    25%{transform: rotate(20deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(-20deg);}
+    100%{transform: rotate(0deg);}
 
 }
+.classmates {
+    display: flex;
+}
+.classmate{
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 2px;
+    max-width: 250px;
+    margin: 20px; 
+    padding: 10px;
+}
+#classmate1{
+    background-color: antiquewhite;
+}
+#classmate1 .icon{
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+}
+#classmate1 .tag{
+    color:purple;
+    text-shadow: 1px 1px 3px black,  0 0 1em blue;
+}
 #classmate2{
-    
+    background-color:aquamarine;
+}
+#classmate2 .icon{
+    border-style: inset;
+    border-color: pink;
+    border-width: 7px;
+}
+#classmate2 .tag{
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: blueviolet;
 }
 #classmate3{
-    
+    background-color:lightblue;
+}
+#classmate3 .icon{
+    border: 4px dashed blue;
+}
+#classmate3 .tag{
+    color: brown;
+    text-shadow: 1px 2px 0px violet;
 }
 #classmate4{
-    
+    background-color:darkkhaki;
+}
+#classmate4 .icon{
+    border-style: groove;
+    border-color: rgb(44, 187, 56);
+    border-width: 10px;
+}
+#classmate4 .tag{
+    text-shadow: 5px 0px 0px rgb(39,253,245);
 }
 #classmate5{
-    
+    background-color:palegreen;
+}
+#classmate5 .icon{
+    border-style: dotted;
+    border-color: rgb(207, 35, 207);
+    border-width: 3px;
+}
+#classmate5 .tag{
+    text-shadow: 0px 10px 0px rgb(247,101,184);
 }
 </style>
